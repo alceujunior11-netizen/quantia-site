@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eyebrow, Section } from './ui';
+import { Eyebrow } from './ui';
 
 const brokers = [
   'XP', 'BTG Pactual', 'Itaú', 'Inter', 'Rico',

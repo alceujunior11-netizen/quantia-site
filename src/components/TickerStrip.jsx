@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 const tickers = [
   { name: 'IBOV', val: '129.842', delta: '+0.84%', pos: true },

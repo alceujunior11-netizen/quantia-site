@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eyebrow, SectionTitle, SectionSub, Section } from './ui';
+import { Eyebrow, SectionTitle, Section } from './ui';
 
 const factors = [
   { name: 'Valuation', desc: 'P/L, EV/EBITDA, P/B normalizados por setor', pct: 18 },

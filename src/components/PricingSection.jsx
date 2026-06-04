@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eyebrow, SectionTitle, SectionSub, Section } from './ui';
+import { Eyebrow, SectionTitle, Section } from './ui';
 
 const plans = [
   {

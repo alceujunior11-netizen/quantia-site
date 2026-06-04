@@ -130,7 +130,7 @@ export default function Navbar() {
       ...styles.nav,
       boxShadow: scrolled ? '0 1px 20px rgba(0,0,0,0.15)' : 'none',
     }}>
-      <a href="#" style={styles.logo}>
+      <a href="/" style={styles.logo}>
         <div style={styles.logoMark}>Q</div>
         QuantIA Capital
       </a>
@@ -139,7 +139,7 @@ export default function Navbar() {
         {navItems.map(item => (
           <li key={item}>
             <a
-              href="#"
+              href="/"
               style={{
                 ...styles.link,
                 color: hovered === item ? 'var(--text)' : 'var(--text-muted)',

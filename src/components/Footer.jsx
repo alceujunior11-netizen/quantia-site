@@ -84,7 +84,7 @@ export default function Footer() {
             {socialIcons.map(s => (
               <a
                 key={s.label}
-                href="#"
+                href="/"
                 aria-label={s.label}
                 style={{
                   width: '30px',
@@ -122,7 +122,7 @@ export default function Footer() {
             {col.links.map(link => (
               <a
                 key={link}
-                href="#"
+                href="/"
                 style={{
                   display: 'block',
                   fontSize: '12px',
