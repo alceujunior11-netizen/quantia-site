@@ -1,4 +1,5 @@
 import React from 'react';
+import { Logo } from './ui';
 
 const columns = [
   {
@@ -44,32 +45,8 @@ export default function Footer() {
       }}>
         {/* Brand column */}
         <div>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            fontSize: '14px',
-            fontWeight: 500,
-            color: 'var(--text)',
-            marginBottom: '8px',
-          }}>
-            <div style={{
-              width: '24px',
-              height: '24px',
-              background: 'var(--logo-bg)',
-              borderRadius: '6px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '11px',
-              fontWeight: 600,
-              color: 'var(--logo-color)',
-              flexShrink: 0,
-              transition: 'background 0.25s ease, color 0.25s ease',
-            }}>
-              Q
-            </div>
-            QuantIA Capital
+          <div style={{ marginBottom: '10px' }}>
+            <Logo size="sm" />
           </div>
           <p style={{
             fontSize: '12px',

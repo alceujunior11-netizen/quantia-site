@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../App';
+import { Logo } from './ui';
 
 const styles = {
   nav: {
@@ -20,27 +21,7 @@ const styles = {
   logo: {
     display: 'flex',
     alignItems: 'center',
-    gap: '9px',
-    fontFamily: 'var(--font-sans)',
-    fontWeight: 500,
-    fontSize: '15px',
-    color: 'var(--text)',
-    letterSpacing: '0.02em',
     textDecoration: 'none',
-  },
-  logoMark: {
-    width: '28px',
-    height: '28px',
-    background: 'var(--logo-bg)',
-    borderRadius: '7px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '12px',
-    fontWeight: 600,
-    color: 'var(--logo-color)',
-    flexShrink: 0,
-    transition: 'background 0.25s ease, color 0.25s ease',
   },
   links: {
     display: 'flex',
@@ -139,8 +120,7 @@ export default function Navbar() {
       boxShadow: scrolled ? '0 1px 20px rgba(0,0,0,0.15)' : 'none',
     }}>
       <a href="/" style={styles.logo}>
-        <div style={styles.logoMark}>Q</div>
-        QuantIA Capital
+        <Logo />
       </a>
 
       <ul style={styles.links}>

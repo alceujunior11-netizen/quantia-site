@@ -1,5 +1,33 @@
 import React from 'react';
 
+export function Logo({ size = 'md' }) {
+  const serif = size === 'sm' ? 14 : size === 'lg' ? 20 : 16;
+  const sans  = size === 'sm' ?  9 : size === 'lg' ? 12 : 10;
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'baseline', gap: '4px', lineHeight: 1 }}>
+      <span style={{
+        fontFamily: 'var(--font-serif)',
+        fontSize: `${serif}px`,
+        fontWeight: 400,
+        color: 'var(--text)',
+        letterSpacing: '-0.01em',
+      }}>
+        Quant<em style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>IA</em>
+      </span>
+      <span style={{
+        fontFamily: 'var(--font-sans)',
+        fontSize: `${sans}px`,
+        fontWeight: 400,
+        letterSpacing: '0.17em',
+        color: 'var(--text-dim)',
+        textTransform: 'uppercase',
+      }}>
+        Capital
+      </span>
+    </span>
+  );
+}
+
 export function Eyebrow({ children }) {
   return (
     <div style={{
