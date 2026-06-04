@@ -295,8 +295,12 @@ export default function Hero() {
           Otimize carteiras com inteligência artificial, modelos proprietários de Markowitz e rebalanceamento adaptativo — a mesma toolbox usada por gestoras de wealth.
         </p>
         <div style={s.ctaRow}>
-          <button style={s.btnCta}>Começar teste grátis — 14 dias</button>
-          <button style={s.btnOutline}>Ver demonstração →</button>
+          <button style={s.btnCta} onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}>
+            Começar teste grátis — 14 dias
+          </button>
+          <button style={s.btnOutline} onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}>
+            Ver demonstração →
+          </button>
         </div>
         <div style={s.statsRow}>
           {stats.map(st => (
@@ -388,7 +392,9 @@ export default function Hero() {
                 </span>
               </div>
             ))}
-            <button style={s.applyBtn}>Aplicar rebalanceamento →</button>
+            <button style={s.applyBtn} onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}>
+              Aplicar rebalanceamento →
+            </button>
           </div>
         </div>
       </div>

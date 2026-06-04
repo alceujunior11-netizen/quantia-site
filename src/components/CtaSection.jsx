@@ -27,8 +27,12 @@ export default function CtaSection() {
         14 dias de acesso completo ao Professional. Sem cartão. Sem compromisso.
       </p>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-        <BtnPrimary>Iniciar agora</BtnPrimary>
-        <BtnOutline>Solicitar demonstração</BtnOutline>
+        <BtnPrimary onClick={() => document.getElementById('planos')?.scrollIntoView({ behavior: 'smooth' })}>
+          Iniciar agora
+        </BtnPrimary>
+        <BtnOutline onClick={() => document.getElementById('como-funciona')?.scrollIntoView({ behavior: 'smooth' })}>
+          Solicitar demonstração
+        </BtnOutline>
       </div>
     </section>
   );

@@ -112,7 +112,15 @@ const styles = {
   },
 };
 
-const navItems = ['Plataforma', 'Research', 'Planos', 'Segurança', 'FAQ'];
+const navItems = [
+  { label: 'Plataforma', id: 'plataforma' },
+  { label: 'Research', id: 'research' },
+  { label: 'Planos', id: 'planos' },
+  { label: 'Segurança', id: 'seguranca' },
+  { label: 'FAQ', id: 'faq' },
+];
+
+const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -137,17 +145,18 @@ export default function Navbar() {
 
       <ul style={styles.links}>
         {navItems.map(item => (
-          <li key={item}>
+          <li key={item.id}>
             <a
-              href="/"
+              href={`#${item.id}`}
+              onClick={e => { e.preventDefault(); scrollTo(item.id); }}
               style={{
                 ...styles.link,
-                color: hovered === item ? 'var(--text)' : 'var(--text-muted)',
+                color: hovered === item.id ? 'var(--text)' : 'var(--text-muted)',
               }}
-              onMouseEnter={() => setHovered(item)}
+              onMouseEnter={() => setHovered(item.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              {item}
+              {item.label}
             </a>
           </li>
         ))}
@@ -162,8 +171,8 @@ export default function Navbar() {
         >
           {theme === 'dark' ? '☀️' : '🌙'}
         </button>
-        <button style={styles.btnGhost}>Entrar</button>
-        <button style={styles.btnPrimary}>Começar agora</button>
+        <button style={styles.btnGhost} onClick={() => scrollTo('planos')}>Entrar</button>
+        <button style={styles.btnPrimary} onClick={() => scrollTo('planos')}>Começar agora</button>
       </div>
     </nav>
   );

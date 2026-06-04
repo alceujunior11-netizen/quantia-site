@@ -51,22 +51,22 @@ export default function App() {
         <TickerStrip />
         <ProblemSection />
         <Divider />
-        <SolutionSection />
+        <div id="plataforma"><SolutionSection /></div>
         <Divider />
-        <HowItWorks />
+        <div id="como-funciona"><HowItWorks /></div>
         <Divider />
         <ModulesSection />
         <Divider />
-        <EngineSection />
+        <div id="research"><EngineSection /></div>
         <Divider />
         <ExplainabilitySection />
         <Divider />
-        <PricingSection />
+        <div id="planos"><PricingSection /></div>
         <Divider />
         <TestimonialsSection />
         <Divider />
-        <IntegrationsSection />
-        <CtaSection />
+        <div id="seguranca"><IntegrationsSection /></div>
+        <div id="faq"><CtaSection /></div>
         <Footer />
       </div>
     </ThemeContext.Provider>

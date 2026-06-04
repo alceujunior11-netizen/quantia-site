@@ -196,20 +196,22 @@ export default function PricingSection() {
                 ))}
               </div>
 
-              <button style={{
-                width: '100%',
-                marginTop: '16px',
-                padding: '10px',
-                borderRadius: '8px',
-                border: plan.featured ? 'none' : '0.5px solid var(--border-strong)',
-                background: plan.featured ? 'var(--accent)' : 'transparent',
-                color: plan.featured ? '#000' : 'var(--text-muted)',
-                fontSize: '13px',
-                fontWeight: plan.featured ? 500 : 400,
-                cursor: 'pointer',
-                fontFamily: 'var(--font-sans)',
-                transition: 'opacity 0.2s',
-              }}>
+              <button
+                onClick={() => window.location.href = 'mailto:contato@quantia.com.br?subject=Interesse%20no%20plano%20' + encodeURIComponent(plan.name)}
+                style={{
+                  width: '100%',
+                  marginTop: '16px',
+                  padding: '10px',
+                  borderRadius: '8px',
+                  border: plan.featured ? 'none' : '0.5px solid var(--border-strong)',
+                  background: plan.featured ? 'var(--accent)' : 'transparent',
+                  color: plan.featured ? '#000' : 'var(--text-muted)',
+                  fontSize: '13px',
+                  fontWeight: plan.featured ? 500 : 400,
+                  cursor: 'pointer',
+                  fontFamily: 'var(--font-sans)',
+                  transition: 'opacity 0.2s',
+                }}>
                 {plan.cta}
               </button>
             </div>
